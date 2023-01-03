@@ -8,8 +8,8 @@
     --bgd-footer-hero:#2E2F42;
     --secondary-color:#F4F4FD;
     --text-footer:#E7E9FC;
-    --text-input-name:rgba(117, 117, 117, 0.5);
-    --text-modal-placeholder: rgba(117, 117, 117, 0.5);
+    --text-input-name:#8E8F99;
+    --text-modal-placeholder: rgba(117, 117, 117, 0.5);;
     --text-modal-input:#000000;
     --border-color:#E7E9FC;
     --text-color-btn-order: #fff;
@@ -273,9 +273,11 @@ box-shadow: 0px 1px 0px rgba(46, 47, 66, 0.08);
     letter-spacing: 0.04em;
     cursor: pointer;
     border: 1px solid var(--acent-color);
-    padding: 8px 16px;
+    padding: 16px 32px;
     border-radius: 4px;
-    transition: background-color var(--transition), border var(--transition), box-shadow var(--transition);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color var(--transition), 
+    border var(--transition), box-shadow var(--transition);
 }
 /* в макете цвет одинаковый с дефолтом */
 .btn-order:hover,
@@ -790,7 +792,7 @@ color: var(--primary-text-color);
     left:50%;
     transform: translate(-50%, -50%);
     width: 408px;
-    height: 579px;
+    height: 584px;
     background-color: var(--btn-filter-hover-color);
     padding: 72px 24px 24px 24px;
 
@@ -802,7 +804,12 @@ color: var(--primary-text-color);
 }
 
 .modal-form-field {
-    margin-bottom: 8px;
+    display: block;
+    margin-bottom:  8px;
+}
+
+.modal-form-field:last-child {
+    margin-bottom: 16;
 }
 
 .modal-form-input {
@@ -842,9 +849,11 @@ color: var(--primary-text-color);
 }
 
 .modal-form-message {
+    display: block;
     resize: none;
     width: 100%;
     height: 120px;
+    margin-bottom: 16px;
     padding: 8px 16px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -902,8 +911,8 @@ color: var(--primary-text-color);
 
 .modal-form-submit {
     align-self: center;
-    width: 170px;
-    height: 50px;
+    width: 169px;
+    height: 56px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -914,6 +923,7 @@ color: var(--primary-text-color);
     border-radius: 4px;
     background-color: var(--acent-color);
     color: var(--primary-bgd-color);
+    cursor: pointer;
 }
 
 .modal-close-button {
@@ -929,8 +939,15 @@ color: var(--primary-text-color);
     border-radius: 50%;
     background-color: var(--border-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    transition: background-color var(--transition), box-shadow var(--transition);
+}
+
+.modal-close-button:hover,
+.modal-close-button:focus {
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 
+0px 2px 1px rgba(0, 0, 0, 0.2);
+background-color: var(--acent-color);
 }
 
 .modal-close-btn-icon {
